@@ -13,31 +13,23 @@ struct ContentView: View {
     
     var body: some View {
         
-        VStack {
-            ZStack {
-                
-                Image("diala")
-                    .resizable()
-                    .frame(width:300, height : 300)
-                    .cornerRadius(150)
-                
-                
+        ZStack{
+            Color.base //here
+                .ignoresSafeArea()
+            VStack {
+                Image("logo")
+               .resizable()
+               .frame(width:390, height : 390)
+                Button("START") {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                }.foregroundColor(.white)
+                .frame(width: 91
+                        , height: 50)
+                .background(Color.button) //here
+                .cornerRadius(10)
             }
-            .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
-            
-                
-                
-            Text("Diala Masoud")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                .bold()
-                .foregroundColor(.black)
-            Text("Hello, I am highly motivated to learn about swift ")
-                .padding()
-            
-            
-            
         }
-        .padding()
+        
     }
 }
 
