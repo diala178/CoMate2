@@ -11,12 +11,12 @@ import ActivityKit
 struct Quiz_Page: View {
     
     var body: some View {
-        VStack{
         ZStack {
             
             Color.base
               .ignoresSafeArea()
-            
+            ScrollView {
+
             VStack{
                 Text("Scenario")
                     .bold()
@@ -30,7 +30,6 @@ struct Quiz_Page: View {
                     .bold()
                     .padding(.leading, -90)
                     .padding(.top, -55)
-                ScrollView {
                     
                     ZStack{ //senario 1
                         RoundedRectangle(cornerRadius: 12)
@@ -263,10 +262,7 @@ struct Quiz_Page: View {
                     .padding(.top,-20)
                 
                 
-                
-                
-            }
-                
+          
                 
             }
             
