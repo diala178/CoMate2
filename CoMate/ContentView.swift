@@ -12,25 +12,29 @@ struct ContentView: View {
     
     
     var body: some View {
-        
-        ZStack{
-            Color.base //here
-                .ignoresSafeArea()
-            VStack {
-                Image("logo")
-               .resizable()
-               .frame(width:390, height : 390)
-                Button("START") {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                }.foregroundColor(.white)
-                .frame(width: 91
-                        , height: 50)
-                .background(Color.button) //here
-                .cornerRadius(10)
+        NavigationStack{
+            ZStack{
+                Color.base //here
+                    .ignoresSafeArea()
+                VStack(spacing:167){
+                    Image("logo")
+                        .resizable()
+                        .frame(width:390, height : 390)
+                    
+                    NavigationLink(destination: Quiz_Page()) {
+                        Text("START")
+                            .foregroundColor(.white)
+                                .frame(width: 91
+                                       , height: 50)
+                                .background(Color.button)
+                                .cornerRadius(10)
+                                
+                }
+                }
+            
             }
-        }
-        
-    }
+          
+        }}
 }
 
 #Preview {
