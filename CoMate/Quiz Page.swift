@@ -11,6 +11,15 @@ import ActivityKit
 struct Quiz_Page: View {
     
     @State var answers: [Int] = Array(repeating: 0, count: 5)
+    @State var sum = 0
+    
+    
+    @State var insight2 = false
+    @State var insight3 = false
+    
+    
+    
+    
     var body: some View {
         NavigationStack{
             ZStack {
@@ -20,6 +29,11 @@ struct Quiz_Page: View {
                 ScrollView {
                     
                     VStack{
+                        
+                        
+                    
+                        
+                        
                         Text("Scenario")
                             .bold()
                             .font(.largeTitle)
@@ -48,38 +62,40 @@ struct Quiz_Page: View {
                             VStack(spacing: 16){
                                 
                                 Button {
-                                self.answers[0] = 1
+                                    self.answers[0] = 1
                                 } label: {
-                                Text("Express the need to prepare first")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[0] == 1 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Attempt to leave the responsibility")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[0] == 1 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
-
+                                
+                                Button {
+                                    self.answers[0] = 2
+                                } label: {
+                                    Text("Express the need to prepare first")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[0] == 2 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
+                                }
+                                
                                 
                                 
                                 
                                 Button {
-                                self.answers[0] = 2
+                                    self.answers[0] = 3
                                 } label: {
-                                Text("Take charge")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[0] == 2 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Take charge")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[0] == 3 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
                                 
                                 
-                                Button {
-                                self.answers[0] = 3
-                                } label: {
-                                Text("Attempt to leave the responsibility")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[0] == 3 ? Color.choice : Color.main)
-                                .cornerRadius(10)
-                                }
+                                
                                 
                             }.padding(.top,200)
                                 .fontWeight(.semibold)
@@ -99,34 +115,36 @@ struct Quiz_Page: View {
                             
                             VStack(spacing: 16){
                                 Button {
-                                self.answers[1] = 1
+                                    self.answers[1] = 1
                                 } label: {
-                                Text("Report the matter to higher management")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[1] == 1 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Report the matter to higher management")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[1] == 1 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
                                 
                                 Button {
-                                self.answers[1] = 2
+                                    self.answers[1] = 2
                                 } label: {
-                                Text("Communicate the problem to the team lead.")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[1] == 2 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Stay silent")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[1] == 2 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
                                 
                                 Button {
-                                self.answers[1] = 3
+                                    self.answers[1] = 3
                                 } label: {
-                                Text("Stay silent")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[1] == 3 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Communicate the problem to the team lead")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[1] == 3 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
+                                
+                                
                                 
                             }.padding(.top,200)
                                 .fontWeight(.semibold)
@@ -147,38 +165,38 @@ struct Quiz_Page: View {
                             
                             VStack(spacing: 16){
                                 Button {
-                                self.answers[2] = 1
+                                    self.answers[2] = 1
                                 } label: {
-                                Text("Report the behavior to the manager")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[2] == 1 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Report the behavior to the manager")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[2] == 1 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
                                 
                                 Button {
-                                self.answers[2] = 2
+                                    self.answers[2] = 2
                                 } label: {
-                                Text("Gather the information yourself.")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[2] == 2 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Gather the information yourself")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[2] == 2 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
                                 
                                 Button {
-                                self.answers[2] = 3
+                                    self.answers[2] = 3
                                 } label: {
-                                Text("Confront your colleague")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[2] == 3 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Confront your colleague")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[2] == 3 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
                                 
                             }.padding(.top,200)
                                 .fontWeight(.semibold)
-                          
+                            
                         }
                         ZStack{ //senario 4
                             RoundedRectangle(cornerRadius: 12)
@@ -193,34 +211,34 @@ struct Quiz_Page: View {
                             
                             VStack(spacing: 16){
                                 Button {
-                                self.answers[3] = 1
+                                    self.answers[3] = 1
                                 } label: {
-                                Text("Stop the discussion")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[3] == 1 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Stop the discussion")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[3] == 1 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
                                 
                                 
                                 Button {
-                                self.answers[3] = 2
+                                    self.answers[3] = 2
                                 } label: {
-                                Text("Maintain the discussion")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[3] == 2 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Maintain the discussion")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[3] == 2 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
                                 
                                 Button {
-                                self.answers[3] = 3
+                                    self.answers[3] = 3
                                 } label: {
-                                Text("Assertively express your viewpoint.")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[3] == 3 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Assertively express your viewpoint.")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[3] == 3 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
                                 
                             }.padding(.top,200)
@@ -240,60 +258,149 @@ struct Quiz_Page: View {
                             
                             VStack(spacing: 16){
                                 Button {
-                                self.answers[4] = 1
+                                    self.answers[4] = 1
                                 } label: {
-                                Text("Stop giving them advice.")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[4] == 1 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Stop giving them advice.")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[4] == 1 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
                                 
                                 
                                 Button {
-                                self.answers[4] = 2
+                                    self.answers[4] = 2
                                 } label: {
-                                Text("Continue offering advice")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[4] == 2 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Continue offering advice")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[4] == 2 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
                                 
                                 Button {
-                                self.answers[4] = 3
+                                    self.answers[4] = 3
                                 } label: {
-                                Text("Communicate with them about the issue")
-                                .foregroundColor(.white)
-                                .frame(width: 268, height: 50)
-                                .background(answers[4] == 3 ? Color.choice : Color.main)
-                                .cornerRadius(10)
+                                    Text("Communicate with them about the issue")
+                                        .foregroundColor(.white)
+                                        .frame(width: 268, height: 50)
+                                        .background(answers[4] == 3 ? Color.choice : Color.main)
+                                        .cornerRadius(10)
                                 }
                                 
                             }.padding(.top,200)
                                 .fontWeight(.semibold)
                             
                         }
-                        NavigationLink(destination: ContentView()) {
-                            Text("START")
-                                .foregroundColor(.white)
-                                .frame(width: 91
-                                       , height: 50)
-                                .background(Color.button)
-                                .cornerRadius(10)
+                        
+                        
+                        
+                        Button("START") {
+                            calc_Sum()
+                            print("hi")
+                        }
+                        .foregroundColor(.white)
+                        .frame(width: 91, height: 50)
+                        .background(Color.button)
+                        .cornerRadius(10)
+                        
+                        
+                        NavigationLink(destination:  CoMate.insight2(), isActive: $insight2) {
                             
-                        }}.padding(.leading , 30)
+                            EmptyView()
+                        }
+                        
+                        NavigationLink(destination:  CoMate.insight3(), isActive: $insight3) {
+                            
+                            EmptyView()
+                        }
+                        
+                        
+                        
+                      
+                        
+                        
+//                        Text("START")
+//                            .foregroundColor(.white)
+//                            .frame(width: 91
+//                                   , height: 50)
+//                            .background(Color.button)
+//                            .cornerRadius(10)
+//                            .onTapGesture {
+//                                calc_Sum()
+//                                print("START Tapped!!!")
+//                                
+//                                
+//                            }
+                        
+
+                        
+
+                        
+                        
+                        
+                    }.padding(.leading , 30)
                         .padding(.trailing , 30)
                         .padding(.top,-20)
                     
                     
                     
                 }
-       
+                
                 
             }.safeAreaPadding(100)
         }
     }
+    
+    
+    
+    
+    func calc_Sum()
+    {
+        print("the sum is \(sum)")
+
+        for n in answers
+        {
+            sum += n
+        }
+        
+        
+        
+        print("the sum is \(sum)")
+        if sum >= 8 && sum <= 12
+        {
+            
+            print("going to page 2")
+            
+            insight2 = true
+            insight3 = false
+            
+        }
+        
+        
+        else if  sum >= 5 && sum <= 7 {
+            
+            print("going to page 3")
+
+            insight2 = false
+            insight3 = true
+            
+            
+        }
+        
+        else {
+            
+            insight3 = false
+            insight2 = false
+            
+            print("no page")
+        }
+        
+        
+        
+    }
+    
+    
 }
 
 

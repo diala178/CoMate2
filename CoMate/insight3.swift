@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Insight3: View {
+struct insight3: View {
     var body: some View {
         NavigationStack{
             ZStack {
@@ -40,7 +40,7 @@ struct Insight3: View {
                         .font(.title3)
                         .multilineTextAlignment(.center)
                         .padding(.top,375)
-                    NavigationLink(destination:Quiz_Page() ) {
+                    NavigationLink(destination:ContentView() ) {
                         Text("Start Again")
                             .foregroundColor(.white)
                             .frame(width: 91, height: 50)
@@ -57,5 +57,5 @@ struct Insight3: View {
 }
 
 #Preview {
-    Insight3()
+    insight3()
 }

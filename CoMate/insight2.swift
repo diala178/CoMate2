@@ -46,7 +46,7 @@ struct insight2: View {
                         .padding(.top,375)
                     
                     
-                    NavigationLink(destination: Quiz_Page()) {
+                    NavigationLink(destination: ContentView()) {
                         Text("Start Again")
                             .foregroundColor(.white)
                             .frame(width: 91
