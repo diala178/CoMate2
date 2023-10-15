@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		283FD0DC2ADC0E56002518B6 /* insight3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283FD0DB2ADC0E56002518B6 /* insight3.swift */; };
+		A1F18A642ADC106B00755F9C /* insight2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F18A632ADC106B00755F9C /* insight2.swift */; };
 		B84972E32AD449A6000A11AA /* Quiz Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84972E22AD449A6000A11AA /* Quiz Page.swift */; };
 		B8CAA1E22ACEE0E7000F9779 /* CoMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CAA1E12ACEE0E7000F9779 /* CoMateApp.swift */; };
 		B8CAA1E42ACEE0E7000F9779 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CAA1E32ACEE0E7000F9779 /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		283FD0DB2ADC0E56002518B6 /* insight3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = insight3.swift; sourceTree = "<group>"; };
+		A1F18A632ADC106B00755F9C /* insight2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = insight2.swift; sourceTree = "<group>"; };
 		B84972E22AD449A6000A11AA /* Quiz Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quiz Page.swift"; sourceTree = "<group>"; };
 		B8CAA1DE2ACEE0E7000F9779 /* CoMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CAA1E12ACEE0E7000F9779 /* CoMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoMateApp.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				B8CAA1E12ACEE0E7000F9779 /* CoMateApp.swift */,
 				B8CAA1E32ACEE0E7000F9779 /* ContentView.swift */,
 				B84972E22AD449A6000A11AA /* Quiz Page.swift */,
+				A1F18A632ADC106B00755F9C /* insight2.swift */,
 				283FD0DB2ADC0E56002518B6 /* insight3.swift */,
 				B8CAA1E52ACEE0E9000F9779 /* Assets.xcassets */,
 				B8CAA1E72ACEE0E9000F9779 /* Preview Content */,
@@ -265,6 +268,7 @@
 			files = (
 				B84972E32AD449A6000A11AA /* Quiz Page.swift in Sources */,
 				B8CAA1E42ACEE0E7000F9779 /* ContentView.swift in Sources */,
+				A1F18A642ADC106B00755F9C /* insight2.swift in Sources */,
 				283FD0DC2ADC0E56002518B6 /* insight3.swift in Sources */,
 				B8CAA1E22ACEE0E7000F9779 /* CoMateApp.swift in Sources */,
 			);
