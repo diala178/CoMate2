@@ -13,7 +13,7 @@ struct Quiz_Page: View {
     @State var answers: [Int] = Array(repeating: 0, count: 5)
     @State var sum = 0
     
-    
+    @State var insight1 = false
     @State var insight2 = false
     @State var insight3 = false
     
@@ -29,9 +29,6 @@ struct Quiz_Page: View {
                 ScrollView {
                     
                     VStack{
-                        
-                        
-                    
                         
                         
                         Text("Scenario")
@@ -69,6 +66,7 @@ struct Quiz_Page: View {
                                         .frame(width: 268, height: 50)
                                         .background(answers[0] == 1 ? Color.choice : Color.main)
                                         .cornerRadius(10)
+                                    
                                 }
                                 
                                 Button {
@@ -97,8 +95,9 @@ struct Quiz_Page: View {
                                 
                                 
                                 
-                            }.padding(.top,200)
-                                .fontWeight(.semibold)
+                        }   .padding(.top,200)
+                            .fontWeight(.semibold)
+                            .font(.system(size: 17))
                             
                         }
                         ZStack{ //senario 2
@@ -147,7 +146,8 @@ struct Quiz_Page: View {
                                 
                                 
                             }.padding(.top,200)
-                                .fontWeight(.semibold)
+                            .fontWeight(.semibold)
+                            .font(.system(size: 17))
                             
                             
                         }
@@ -195,7 +195,8 @@ struct Quiz_Page: View {
                                 }
                                 
                             }.padding(.top,200)
-                                .fontWeight(.semibold)
+                            .fontWeight(.semibold)
+                            .font(.system(size: 17))
                             
                         }
                         ZStack{ //senario 4
@@ -242,7 +243,8 @@ struct Quiz_Page: View {
                                 }
                                 
                             }.padding(.top,200)
-                                .fontWeight(.semibold)
+                            .fontWeight(.semibold)
+                            .font(.system(size: 17))
                             
                         }
                         ZStack{ // senario 5
@@ -260,7 +262,7 @@ struct Quiz_Page: View {
                                 Button {
                                     self.answers[4] = 1
                                 } label: {
-                                    Text("Stop giving them advice.")
+                                    Text("Stop giving them advice")
                                         .foregroundColor(.white)
                                         .frame(width: 268, height: 50)
                                         .background(answers[4] == 1 ? Color.choice : Color.main)
@@ -286,67 +288,39 @@ struct Quiz_Page: View {
                                         .frame(width: 268, height: 50)
                                         .background(answers[4] == 3 ? Color.choice : Color.main)
                                         .cornerRadius(10)
+                                    
                                 }
                                 
                             }.padding(.top,200)
-                                .fontWeight(.semibold)
+                            .fontWeight(.semibold)
+                            .font(.system(size: 17))
                             
                         }
                         
+                        .padding()
                         
-                        
-                        Button("START") {
-                            calc_Sum()
-                            print("hi")
-                        }
-                        .foregroundColor(.white)
-                        .frame(width: 91, height: 50)
-                        .background(Color.button)
-                        .cornerRadius(10)
-                        
-                        
-                        NavigationLink(destination:  CoMate.insight2(), isActive: $insight2) {
-                            
-                            EmptyView()
-                        }
-                        
-                        NavigationLink(destination:  CoMate.insight3(), isActive: $insight3) {
-                            
-                            EmptyView()
-                        }
-                        
-                        
-                        
-                      
-                        
-                        
-//                        Text("START")
-//                            .foregroundColor(.white)
-//                            .frame(width: 91
-//                                   , height: 50)
-//                            .background(Color.button)
-//                            .cornerRadius(10)
-//                            .onTapGesture {
-//                                calc_Sum()
-//                                print("START Tapped!!!")
-//                                
-//                                
-//                            }
-                        
+                        Text("START")
+                            .foregroundColor(.white)
+                            .frame(width: 91, height: 50)
+                            .background(Color.button)
+                            .cornerRadius(10)
+                            .onTapGesture {
+                                calc_Sum()
+                                print("START Tapped!!!")
+                            }
 
                         
-
+                        NavigationLink(destination:  CoMate.insight2(), isActive: $insight2) {EmptyView()}
                         
+                        NavigationLink(destination:  CoMate.insight3(), isActive: $insight3) {EmptyView()}
                         
+                     
                         
                     }.padding(.leading , 30)
                         .padding(.trailing , 30)
                         .padding(.top,-20)
                     
-                    
-                    
                 }
-                
                 
             }.safeAreaPadding(100)
         }
@@ -355,23 +329,22 @@ struct Quiz_Page: View {
     
     
     
-    func calc_Sum()
-    {
+    func calc_Sum(){
         print("the sum is \(sum)")
 
         for n in answers
         {
             sum += n
         }
-        
-        
-        
         print("the sum is \(sum)")
+        
         if sum >= 8 && sum <= 12
+            
         {
             
             print("going to page 2")
             
+            insight1 = false
             insight2 = true
             insight3 = false
             
@@ -381,23 +354,31 @@ struct Quiz_Page: View {
         else if  sum >= 5 && sum <= 7 {
             
             print("going to page 3")
-
+            
+            insight1 = false
             insight2 = false
             insight3 = true
             
             
         }
+        else if  sum > 12 {
+            
+            print("going to page 1")
+            
+            insight1 = true
+            insight2 = false
+            insight3 = false
+            
+        }
         
         else {
             
-            insight3 = false
+            insight1 = false
             insight2 = false
+            insight3 = false
             
             print("no page")
         }
-        
-        
-        
     }
     
     
