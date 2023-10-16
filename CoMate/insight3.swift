@@ -40,7 +40,7 @@ struct insight3: View {
                         .font(.title3)
                         .multilineTextAlignment(.center)
                         .padding(.top,375)
-                    NavigationLink(destination:ContentView() ) {
+                    NavigationLink(destination:Quiz_Page().navigationBarBackButtonHidden(true)) {
                         Text("Start Again")
                             .foregroundColor(.white)
                             .frame(width: 91, height: 50)

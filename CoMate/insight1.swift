@@ -1,18 +1,15 @@
 //
-//  insighPage2.swift
+//  insight1.swift
 //  CoMate
 //
-//  Created by Rimah Saleh Alwanin on 12/10/2023.
+//  Created by Diala Masoud on 16/10/2023.
 //
-
 
 import SwiftUI
 
-struct insight2: View {
+struct insight1: View {
     var body: some View {
-        
         NavigationStack{
-            
             
             ZStack{
                 Color.base
@@ -28,20 +25,20 @@ struct insight2: View {
                         .frame(width: 300,height: 500)
                         .foregroundColor(.white)
                     
-                    Text("Very Good! 👍🏽")
+                    Text("Excellent! 👏🏽 ")
                         .bold() .font(.title2)
                         .padding(.top,-200)
                     
-                    Image("insight2")
+                    Image("insight1")
                         .resizable()
                         .aspectRatio( contentMode:.fit)
                         .frame(width: 300)
                     
-                    Text("You have good")
+                    Text("You have excellent")
                         .font(.title3)
                         .padding(.top,320)
                     
-                    Text("communication skills.")
+                    Text("communication skills")
                         .font(.title3)
                         .padding(.top,375)
                     
@@ -55,23 +52,16 @@ struct insight2: View {
                             .cornerRadius(10)
                             .padding(.top,650)
                         
-                        
                     }
+                    
                     
                 }
                 
+                
             }
-            
-            
         }
     }
 }
-
-
-
-
-
-
 #Preview {
-    insight2()
+    insight1()
 }

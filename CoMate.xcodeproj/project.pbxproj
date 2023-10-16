@@ -17,6 +17,7 @@
 		B8CAA1F32ACEE0E9000F9779 /* CoMateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CAA1F22ACEE0E9000F9779 /* CoMateTests.swift */; };
 		B8CAA1FD2ACEE0E9000F9779 /* CoMateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CAA1FC2ACEE0E9000F9779 /* CoMateUITests.swift */; };
 		B8CAA1FF2ACEE0E9000F9779 /* CoMateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CAA1FE2ACEE0E9000F9779 /* CoMateUITestsLaunchTests.swift */; };
+		B8CC49FE2ADD5E0300EC1C76 /* insight1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CC49FD2ADD5E0300EC1C76 /* insight1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		B8CAA1F82ACEE0E9000F9779 /* CoMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8CAA1FC2ACEE0E9000F9779 /* CoMateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoMateUITests.swift; sourceTree = "<group>"; };
 		B8CAA1FE2ACEE0E9000F9779 /* CoMateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoMateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B8CC49FD2ADD5E0300EC1C76 /* insight1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = insight1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				B8CAA1E12ACEE0E7000F9779 /* CoMateApp.swift */,
 				B84972E22AD449A6000A11AA /* Quiz Page.swift */,
+				B8CC49FD2ADD5E0300EC1C76 /* insight1.swift */,
 				B8CAA1E32ACEE0E7000F9779 /* ContentView.swift */,
 				A1F18A632ADC106B00755F9C /* insight2.swift */,
 				283FD0DB2ADC0E56002518B6 /* insight3.swift */,
@@ -268,6 +271,7 @@
 			files = (
 				B84972E32AD449A6000A11AA /* Quiz Page.swift in Sources */,
 				B8CAA1E42ACEE0E7000F9779 /* ContentView.swift in Sources */,
+				B8CC49FE2ADD5E0300EC1C76 /* insight1.swift in Sources */,
 				A1F18A642ADC106B00755F9C /* insight2.swift in Sources */,
 				283FD0DC2ADC0E56002518B6 /* insight3.swift in Sources */,
 				B8CAA1E22ACEE0E7000F9779 /* CoMateApp.swift in Sources */,

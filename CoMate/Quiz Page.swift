@@ -22,10 +22,13 @@ struct Quiz_Page: View {
     
     var body: some View {
         NavigationStack{
+            
             ZStack {
+
                 
                 Color.base
                     .ignoresSafeArea()
+                
                 ScrollView {
                     
                     VStack{
@@ -299,20 +302,22 @@ struct Quiz_Page: View {
                         
                         .padding()
                         
-                        Text("START")
-                            .foregroundColor(.white)
-                            .frame(width: 91, height: 50)
-                            .background(Color.button)
-                            .cornerRadius(10)
-                            .onTapGesture {
-                                calc_Sum()
-                                print("START Tapped!!!")
-                            }
+                            Text("DONE")
+                                .foregroundColor(.white)
+                                .frame(width: 91, height: 50)
+                                .background(Color.button)
+                                .cornerRadius(10)
+                                .onTapGesture {
+                                    calc_Sum()
+                                    print("START Tapped!!!")
+                                }
 
                         
-                        NavigationLink(destination:  CoMate.insight2(), isActive: $insight2) {EmptyView()}
+                        NavigationLink(destination:  CoMate.insight1().navigationBarBackButtonHidden(true), isActive: $insight2) {EmptyView()}
                         
-                        NavigationLink(destination:  CoMate.insight3(), isActive: $insight3) {EmptyView()}
+                        NavigationLink(destination:  CoMate.insight2().navigationBarBackButtonHidden(true), isActive: $insight2) {EmptyView()}
+                        
+                        NavigationLink(destination:  CoMate.insight3().navigationBarBackButtonHidden(true), isActive: $insight3) {EmptyView()}
                         
                      
                         

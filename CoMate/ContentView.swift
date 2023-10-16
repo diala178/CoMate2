@@ -21,7 +21,7 @@ struct ContentView: View {
                         .resizable()
                         .frame(width:390, height : 390)
                     
-                    NavigationLink(destination: Quiz_Page()) {
+                    NavigationLink(destination: Quiz_Page().navigationBarBackButtonHidden()) {
                         Text("START")
                             .foregroundColor(.white)
                                 .frame(width: 91
