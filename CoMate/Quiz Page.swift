@@ -96,7 +96,7 @@ struct Quiz_Page: View {
                                 }
                                 
                                 
-                                
+                               
                                 
                         }   .padding(.top,200)
                             .fontWeight(.semibold)
@@ -313,7 +313,7 @@ struct Quiz_Page: View {
                                 }
 
                         
-                        NavigationLink(destination:  CoMate.insight1().navigationBarBackButtonHidden(true), isActive: $insight2) {EmptyView()}
+                        NavigationLink(destination:  CoMate.insight1().navigationBarBackButtonHidden(true), isActive: $insight1) {EmptyView()}
                         
                         NavigationLink(destination:  CoMate.insight2().navigationBarBackButtonHidden(true), isActive: $insight2) {EmptyView()}
                         
@@ -332,7 +332,7 @@ struct Quiz_Page: View {
     }
     
     
-    
+    // answers = [1,3,2,1,2]
     
     func calc_Sum(){
         print("the sum is \(sum)")
